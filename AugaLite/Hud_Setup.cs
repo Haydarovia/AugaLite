@@ -77,7 +77,9 @@ namespace AugaLite
 
             // just the hover text font.  none of the other stuff needed.
             var augaHoverText = AugaLite.Assets.Hud.transform.Find("hudroot/crosshair/Dummy/HoverName").GetComponent<TextMeshProUGUI>();
+            var originalFont = __instance.m_hoverName.font;
             __instance.m_hoverName.font = augaHoverText.font;
+            __instance.m_hoverName.font.fallbackFontAssetTable.Insert(0, originalFont);
             
             var originalGuardianPowerMaterial = __instance.m_gpIcon.material;
             __instance.m_gpRoot = (RectTransform)__instance.Replace("hudroot/GuardianPower", AugaLite.Assets.Hud);

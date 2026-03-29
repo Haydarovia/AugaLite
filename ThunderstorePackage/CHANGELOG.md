@@ -1,3 +1,6 @@
+v1.0.5
+- add fallback font to hover text for glyphs that do not render in the custom font.
+
 v1.0.4
 - fix, damage numbers were missing after the last update.
 
