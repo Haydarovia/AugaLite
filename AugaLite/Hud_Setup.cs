@@ -44,15 +44,7 @@ namespace AugaLite
             __instance.m_badConnectionIcon = __instance.Replace("hudroot/BadConnectionIcon", AugaLite.Assets.Hud).gameObject;
 
 
-            var originalDreamTexts = __instance.m_sleepingProgress.GetComponent<SleepText>().m_dreamTexts;
-            var loadingScreen = __instance.Replace("LoadingBlack", AugaLite.Assets.Hud);
-            __instance.m_loadingScreen = loadingScreen.GetComponent<CanvasGroup>();
-            __instance.m_loadingProgress = loadingScreen.Find("Loading").gameObject;
-            __instance.m_sleepingProgress = loadingScreen.Find("Sleeping").gameObject;
-            __instance.m_teleportingProgress = loadingScreen.Find("Teleporting").gameObject;
-            __instance.m_loadingImage = loadingScreen.Find("Loading/Image").GetComponent<Image>();
-            __instance.m_loadingTip = loadingScreen.Find("Loading/Tip").GetComponent<TMP_Text>();
-            __instance.m_sleepingProgress.GetComponent<SleepText>().m_dreamTexts = originalDreamTexts;
+            //f
 
             __instance.m_eventBar = __instance.Replace("hudroot/EventBar", AugaLite.Assets.Hud).gameObject;
             __instance.m_eventName = __instance.m_eventBar.GetComponentInChildren<TMP_Text>();
